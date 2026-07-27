@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K2 — Water Bottles Built for Altitude</title>
+  <meta name="description" content="K2 makes insulated stainless steel water bottles built for altitude. 24 hours cold, 12 hours hot, zero plastic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔️</text></svg>" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="logo" aria-label="K2 home">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M2 27 L12 8 L18 18 L22 12 L30 27 Z" />
+          <path class="logo__snow" d="M12 8 L8.4 14.8 L10.6 13.4 L12.8 15.2 L15 13.6 L16.4 15.6 Z" />
+        </svg>
+        <span class="logo__word">K2</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#bottles">Bottles</a>
+        <a href="#tech">Technology</a>
+        <a href="#story">Story</a>
+        <a href="#sustainability">Impact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 L3 7 v13 a1 1 0 0 0 1 1 h16 a1 1 0 0 0 1-1 V7 l-3-5 Z M3 7 h18 M16 11 a4 4 0 0 1-8 0" /></svg>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="ridge ridge--far"></div>
+      <div class="ridge ridge--mid"></div>
+      <div class="ridge ridge--near"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow reveal">8,611 m · Karakoram</p>
+      <h1 class="hero__title reveal">
+        Cold stays <em>cold.</em><br />
+        For twenty&#8209;four hours.
+      </h1>
+      <p class="hero__sub reveal">
+        Double-wall vacuum insulated stainless steel, pressure-tested at altitude.
+        One bottle. No plastic. No compromise.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#bottles" class="btn btn--primary">Shop the range</a>
+        <a href="#tech" class="btn btn--ghost">How it works</a>
+      </div>
+
+      <ul class="hero__stats reveal">
+        <li><strong data-count="24">0</strong><span>hrs cold</span></li>
+        <li><strong data-count="12">0</strong><span>hrs hot</span></li>
+        <li><strong data-count="100">0</strong><span>% BPA free</span></li>
+      </ul>
+    </div>
+
+    <a href="#bottles" class="scroll-hint" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>18/8 Stainless Steel</span><span>•</span>
+      <span>Vacuum Insulated</span><span>•</span>
+      <span>Leakproof Guarantee</span><span>•</span>
+      <span>Lifetime Warranty</span><span>•</span>
+      <span>18/8 Stainless Steel</span><span>•</span>
+      <span>Vacuum Insulated</span><span>•</span>
+      <span>Leakproof Guarantee</span><span>•</span>
+      <span>Lifetime Warranty</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section class="section" id="bottles">
+    <div class="section__head reveal">
+      <p class="eyebrow">The Range</p>
+      <h2>Four bottles. Every elevation.</h2>
+      <p class="section__lead">
+        From the desk to the death zone. Each one machined from a single piece of
+        18/8 stainless, then vacuum sealed by hand.
+      </p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filter bottles">
+      <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="everyday" aria-pressed="false">Everyday</button>
+      <button class="chip" data-filter="trail" aria-pressed="false">Trail</button>
+      <button class="chip" data-filter="expedition" aria-pressed="false">Expedition</button>
+    </div>
+
+    <div class="grid" id="productGrid"><!-- injected by script.js --></div>
+  </section>
+
+  <!-- ============ TECH ============ -->
+  <section class="section section--dark" id="tech">
+    <div class="tech">
+      <div class="tech__copy reveal">
+        <p class="eyebrow">Technology</p>
+        <h2>Six layers between you and the weather.</h2>
+        <p class="section__lead">
+          The wall of a K2 bottle is thinner than a pencil and holds a vacuum
+          near-perfect enough to stop heat dead. Hover a layer to see what it does.
+        </p>
+
+        <ul class="layers" id="layers">
+          <li data-layer="1"><span class="layers__num">01</span>
+            <div><h3>Powder-coat shell</h3><p>Grippy, chip-resistant, still fine after a season on rock.</p></div>
+          </li>
+          <li data-layer="2"><span class="layers__num">02</span>
+            <div><h3>18/8 outer wall</h3><p>Food-grade stainless. Won't rust, won't hold flavor.</p></div>
+          </li>
+          <li data-layer="3"><span class="layers__num">03</span>
+            <div><h3>The vacuum</h3><p>Pumped to 10⁻³ mbar. Nothing to conduct heat through.</p></div>
+          </li>
+          <li data-layer="4"><span class="layers__num">04</span>
+            <div><h3>Copper radiant shield</h3><p>Reflects infrared back where it came from.</p></div>
+          </li>
+          <li data-layer="5"><span class="layers__num">05</span>
+            <div><h3>18/8 inner wall</h3><p>Electropolished mirror finish. Nothing sticks.</p></div>
+          </li>
+          <li data-layer="6"><span class="layers__num">06</span>
+            <div><h3>Whatever you poured in</h3><p>At the temperature you poured it.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tech__visual reveal" aria-hidden="true">
+        <div class="cutaway">
+          <div class="cutaway__ring cutaway__ring--1" data-ring="1"></div>
+          <div class="cutaway__ring cutaway__ring--2" data-ring="2"></div>
+          <div class="cutaway__ring cutaway__ring--3" data-ring="3"></div>
+          <div class="cutaway__ring cutaway__ring--4" data-ring="4"></div>
+          <div class="cutaway__ring cutaway__ring--5" data-ring="5"></div>
+          <div class="cutaway__core" data-ring="6"></div>
+        </div>
+        <p class="cutaway__caption">Cross-section, 750 ml Summit</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="section" id="story">
+    <div class="story">
+      <div class="story__visual reveal" aria-hidden="true">
+        <div class="story__frame">
+          <div class="story__peak"></div>
+        </div>
+      </div>
+      <div class="story__copy reveal">
+        <p class="eyebrow">Story</p>
+        <h2>Named after the one that doesn't forgive.</h2>
+        <p>
+          K2 is the second-highest mountain on earth and by a wide margin the harder
+          one. No easy route, no good season, no room for gear that almost works.
+        </p>
+        <p>
+          We started in 2019 after a bottle split on a cold night at 5,300 m and
+          soaked a sleeping bag. The fix took three years and eleven prototypes.
+          Every bottle we ship still gets frozen, dropped, and pressure-cycled before
+          it leaves the building.
+        </p>
+        <blockquote>
+          "Test it where it fails. Then build the one that doesn't."
+          <cite>— the only thing written on our workshop wall</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SUSTAINABILITY ============ -->
+  <section class="section section--tint" id="sustainability">
+    <div class="section__head reveal">
+      <p class="eyebrow">Impact</p>
+      <h2>Bottles that end the bottle.</h2>
+    </div>
+
+    <div class="impact">
+      <article class="impact__card reveal">
+        <strong data-count="4200000">0</strong>
+        <p>Single-use plastic bottles displaced by K2 owners since 2019.</p>
+      </article>
+      <article class="impact__card reveal">
+        <strong data-count="90">0</strong><span class="impact__unit">%</span>
+        <p>Recycled steel content across every bottle in the range.</p>
+      </article>
+      <article class="impact__card reveal">
+        <strong data-count="1">0</strong><span class="impact__unit">%</span>
+        <p>Of revenue to high-altitude watershed protection. Every year, profit or not.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="cta">
+    <div class="cta__inner reveal">
+      <h2>Get the drop list.</h2>
+      <p>New colorways, restocks, and field notes. About once a month.</p>
+      <form class="cta__form" id="signupForm" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        <button type="submit" class="btn btn--primary">Sign up</button>
+      </form>
+      <p class="cta__msg" id="formMsg" role="status"></p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#top" class="logo">
+          <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M2 27 L12 8 L18 18 L22 12 L30 27 Z" />
+            <path class="logo__snow" d="M12 8 L8.4 14.8 L10.6 13.4 L12.8 15.2 L15 13.6 L16.4 15.6 Z" />
+          </svg>
+          <span class="logo__word">K2</span>
+        </a>
+        <p>Built for altitude.<br />Fine at sea level too.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Shop">
+        <h4>Shop</h4>
+        <a href="#bottles">All bottles</a>
+        <a href="#bottles">Lids &amp; caps</a>
+        <a href="#bottles">Bundles</a>
+        <a href="#bottles">Gift cards</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Support">
+        <h4>Support</h4>
+        <a href="#">Lifetime warranty</a>
+        <a href="#">Shipping &amp; returns</a>
+        <a href="#">Care guide</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Company">
+        <h4>Company</h4>
+        <a href="#story">Our story</a>
+        <a href="#sustainability">Impact report</a>
+        <a href="#">Ambassadors</a>
+        <a href="#">Careers</a>
+      </nav>
+    </div>
+    <div class="footer__base">
+      <p>&copy; <span id="year">2026</span> K2 Bottle Co. All rights reserved.</p>
+      <p class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ CART DRAWER ============ -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <header class="drawer__head">
+      <h3>Your cart</h3>
+      <button class="drawer__close" id="drawerClose" aria-label="Close cart">&times;</button>
+    </header>
+    <div class="drawer__body" id="drawerBody">
+      <p class="drawer__empty">Nothing in here yet.</p>
+    </div>
+    <footer class="drawer__foot">
+      <div class="drawer__total"><span>Subtotal</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn--primary btn--block" id="checkoutBtn">Checkout</button>
+      <p class="drawer__note">Free shipping over $75 · 30-day returns</p>
+    </footer>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
