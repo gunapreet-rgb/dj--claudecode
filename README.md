@@ -21,6 +21,34 @@ python3 -m http.server 8000
 | `index.html` | All markup — nav, hero, product grid, tech breakdown, story, impact, newsletter, footer, cart drawer |
 | `styles.css` | Design system (custom properties), layout, components, responsive rules |
 | `script.js` | Product catalogue, cart, filters, scroll effects, form validation |
+| `build-share.mjs` | Bundles the three into one self-contained file for sharing |
+| `fonts/` | Inter and Syne (latin subset, variable) — inlined by the build |
+| `dist/k2-share.html` | Build output: the whole site in a single file |
+
+## Sharing it with clients
+
+Three options, in order of how quickly you can send something.
+
+**1. Single file.** Run `node build-share.mjs` and send `dist/k2-share.html`.
+Everything — CSS, JavaScript, both typefaces — is inlined, so it opens by
+double-click with no server and no internet. Good for email, Slack, or a
+client who wants a copy that won't change under them.
+
+**2. GitHub Pages.** Free, and the URL keeps updating as you push. In the
+repo: **Settings → Pages → Source: Deploy from a branch**, pick this branch
+and the `/ (root)` folder. A minute later it's live at
+`https://<user>.github.io/<repo>/`. No workflow file needed — the site is
+already static at the repo root.
+
+**3. Drag-and-drop host.** Drop the project folder on
+[netlify.com/drop](https://app.netlify.com/drop) for an instant URL you can
+later point a real domain at. Vercel and Cloudflare Pages work the same way.
+
+Rebuild the single file after any change to the source:
+
+```bash
+node build-share.mjs
+```
 
 ## Features
 
